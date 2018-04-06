@@ -1,0 +1,7 @@
+name: Sandbox Migration
+description: A custom D7 to D8 migration module for my sandbox.
+type: module
+core: 8.x
+package: 'My Sandbox'
+dependencies:
+- migrate_tools

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains sandbox_migration.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function sandbox_migration_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the sandbox_migration module.
+    case 'help.page.sandbox_migration':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('A custom D7 to D8 migration module for my sandbox.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

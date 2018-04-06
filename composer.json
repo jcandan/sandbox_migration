@@ -1,0 +1,15 @@
+{
+  "name": "jcandan/sandbox_migration",
+  "type": "drupal-module",
+  "description": "A custom D7 to D8 migration module for my sandbox.",
+  "minimum-stability": "dev",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ],
+  "require": {
+    "drupal/migrate_tools": "4.x-dev"
+  }
+}
