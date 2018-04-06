@@ -1,0 +1,41 @@
+id: sandbox_page
+label: Pages
+migration_tags:
+- Drupal 7
+deriver: Drupal\node\Plugin\migrate\D7NodeDriver
+migration_group: sandbox
+source:
+  plugin: d7_node
+  node_type: page
+process:
+  # comment out nid and vid to autoincrement
+  # caution: safe as long as nothing else is referencing them
+  # nid: nid
+  # vid: vid
+  type:
+    plugin: default_value
+    default_value: page
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: "und"
+  title: title
+  uid:
+    plugin: default_value
+    default_value: 1
+  status: status
+  created: created
+  changed: changed
+  promote: promot:
+  sticky: sticky
+  body/format:
+    plugin: default_value
+    default_value: full_html
+  body: body
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+destination:
+  plugin: entity:node
+migration_dependencies: {}
+
